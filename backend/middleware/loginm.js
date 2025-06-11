@@ -1,7 +1,4 @@
-
-
-
-
+//==================================
 const login=(req,res,next)=>{
     if(!req.isAuthenticated()){
         
