@@ -1,0 +1,28 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> -->
+<!--  -->
+<body>
+    <!-- <form method="get" action="http://localhost:3000/listing/new">
+        <button>add new </button>
+    </form> -->
+    <h1>show .ejs page</h1>
+    <div class="container">  <div class="row"><%for(el of data){%>
+        <div class="col-md-4 mb-4">
+<div class="card" style="width: 20rem;">
+  <img src="<%=el.image%>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%=el.title%></h5>
+    <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i><%= Number(el.price).toLocaleString("en-IN") %></p>
+    <a href="/list/<%=el._id%>" class="btn btn-primary">details</a>
+  </div>
+</div></div> <%}%> </div></div>
+  
+       <!-- <ul> <li><a href="http://localhost:3000/list/<%=el._id%>"><%=el.title%></a> <form><button >delete</button></form></li></ul> -->
+ 
+</body>
+</html>

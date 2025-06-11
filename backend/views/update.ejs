@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Listing</title>
+</head>
+<body>
+
+  <h1>Edit Listing</h1>
+  <h2>ID: <%= id %></h2>
+
+  <form method="POST" action="/<%= id %>/edit?_method=PUT"> 
+    <label>Title:</label><br>
+    <textarea name="title" ><%= title %></textarea><br><br>
+
+    <label>Price:</label><br>
+    <textarea name="price" ><%= price %></textarea><br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description" ><%= description %></textarea><br><br>
+
+    <label>Location:</label><br>
+    <textarea name="location" ><%= location %></textarea><br><br>
+
+    <label>Country:</label><br>
+    <textarea name="country" ><%= country %></textarea><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>

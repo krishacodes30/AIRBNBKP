@@ -1,0 +1,29 @@
+const mongoose = require("mongoose");
+const initData = require("./data.js");
+const listing = require("../model/listing.js");
+
+const MONGO_URL = "mongodb://127.0.0.1:27017/airbnb";
+
+main()
+  .then(() => {
+    console.log("connected to DB");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+async function main() {
+  await mongoose.connect(MONGO_URL);
+}
+
+
+const initdb=async ()=> {
+    await listing.deleteMany({});
+    await listing.insertMany(initData.data);
+console.log(" data added succes fully @index.js @23")
+
+}
+
+initdb();
+
+
